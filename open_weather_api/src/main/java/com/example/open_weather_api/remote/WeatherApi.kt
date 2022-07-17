@@ -15,7 +15,7 @@ interface WeatherApi {
         @Query("lat") lat: String,
         @Query("lon") lon: String,
         @Query("exclude") exclude: String="hourly,daily",
-        @Query("appid") appid: String = API_KEY.ifBlank { throw IllegalStateException("") }
+        @Query("appid") appid: String = API_KEY.ifBlank { throw IllegalStateException("You must provide a valid api key") }
 
     ): WeatherDTO
 
