@@ -71,5 +71,7 @@ dependencies {
     androidTestImplementation (libs.hilt.android.testing)
     kaptAndroidTest (libs.hilt.android.compiler)
 
+    testImplementation (libs.junit)
+
     implementation project (':open_weather_api')
 }

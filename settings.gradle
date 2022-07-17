@@ -55,7 +55,7 @@ dependencyResolutionManagement {
             alias("test-runner").to("androidx.test:runner:$RUNNER_VERSION")
             alias("retrofit")to( "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION")
             alias("retrofit-gson").to( "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION")
-
+            alias("junit").to("junit:junit:$JUNIT_VERSION")
 
 
 
