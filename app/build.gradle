@@ -45,7 +45,9 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+
 }
+
 
 dependencies {
     implementation(libs.core.ktx)
@@ -62,16 +64,16 @@ dependencies {
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.android)
 
-    androidTestImplementation(libs.hilt.android)
-    androidTestImplementation (libs.junit.ktx)
-    androidTestImplementation (libs.mockito.core)
-    androidTestImplementation (libs.mockito.kotlin)
-    androidTestImplementation (libs.mockk)
-    androidTestImplementation (libs.truth)
-    androidTestImplementation (libs.hilt.android.testing)
-    kaptAndroidTest (libs.hilt.android.compiler)
-
+    testImplementation (libs.junit.ktx)
+    testImplementation (libs.mockito.core)
+    testImplementation (libs.mockito.kotlin)
+    testImplementation (libs.mockk)
+    testImplementation (libs.truth)
     testImplementation (libs.junit)
+
+
+
+
 
     implementation project (':open_weather_api')
 }
