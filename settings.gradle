@@ -1,16 +1,69 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
 pluginManagement {
     repositories {
         gradlePluginPortal()
         google()
         mavenCentral()
+
     }
 }
+enableFeaturePreview('VERSION_CATALOGS')
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
+
         google()
         mavenCentral()
+
+
+    }
+    versionCatalogs {
+        libs {
+
+            alias('core-ktx').to("androidx.core:core-ktx:${CORE_KTX_VERSION}")
+
+            // compose
+
+            alias('compose-ui').to("androidx.compose.ui:ui:${COMPOSE_VERSION}")
+            alias('compose-material').to("androidx.compose.material:material:${COMPOSE_VERSION}")
+            alias('compose-tooling').to("androidx.compose.ui:ui-tooling-preview:${COMPOSE_VERSION}")
+            alias('compose-activity').to("androidx.activity:activity-compose:${ACTIVITY_COMPOSE_VERSION}")
+
+            //  hilt
+
+            alias('hilt-android').to("com.google.dagger:hilt-android:$HILT_VERSION")
+            alias('hilt-compiler').to("com.google.dagger:hilt-compiler:$HILT_VERSION")
+            alias('hilt-navigation-compose').to("androidx.hilt:hilt-navigation-compose:$HILT_NAVIGATION_COMPOSE_VERSION")
+            alias('coil-compose').to("io.coil-kt:coil-compose:$COIL_COMPOSE_VERSION")
+
+
+            // Optional -- Mockito framework
+            alias("mockito-core").to("org.mockito:mockito-core:$MOCKITO_VERSION")
+
+            // Optional -- mockito-kotlin
+            alias("mockito-kotlin").to("org.mockito.kotlin:mockito-kotlin:$MOCKITO_KOTLIN_VERSION")
+
+            // Optional -- Mockk framework
+            alias("mockk").to("io.mockk:mockk:$MOCKK_VERSION")
+            alias("truth").to("com.google.truth:truth:$TRUTH_VERSION")
+
+            // For Robolectric tests.
+            alias("hilt-android-testing").to("com.google.dagger:hilt-android-testing:$HILT_TESTING_VERSION")
+            alias("hilt-android-compiler").to("com.google.dagger:hilt-android-compiler:$HILT_TESTING_VERSION")
+            alias("junit-ktx").to("androidx.test.ext:junit-ktx:$JUNIT_KTX")
+            alias("test-runner").to("androidx.test:runner:$RUNNER_VERSION")
+            alias("retrofit")to( "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION")
+            alias("retrofit-gson").to( "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION")
+
+
+
+
+
+        }
     }
 }
-rootProject.name = "PSA Weather test"
+
 include ':app'
+
+include ':open_weather_api'
