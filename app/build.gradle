@@ -58,22 +58,19 @@ dependencies {
     implementation(libs.compose.ui)
     implementation(libs.compose.tooling)
     implementation(libs.hilt.navigation.compose)
-
+    implementation(libs.compose.navigation)
 
 
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.android)
 
-    testImplementation (libs.junit.ktx)
-    testImplementation (libs.mockito.core)
-    testImplementation (libs.mockito.kotlin)
-    testImplementation (libs.mockk)
-    testImplementation (libs.truth)
-    testImplementation (libs.junit)
+    testImplementation(libs.junit.ktx)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
+    testImplementation(libs.mockk)
+    testImplementation(libs.truth)
+    testImplementation(libs.junit)
 
 
-
-
-
-    implementation project (':open_weather_api')
+    implementation project(':open_weather_api')
 }

@@ -44,21 +44,21 @@ dependencyResolutionManagement {
             // Optional -- mockito-kotlin
             alias("mockito-kotlin").to("org.mockito.kotlin:mockito-kotlin:$MOCKITO_KOTLIN_VERSION")
 
-            // Optional -- Mockk framework
+
             alias("mockk").to("io.mockk:mockk:$MOCKK_VERSION")
             alias("truth").to("com.google.truth:truth:$TRUTH_VERSION")
 
-            // For Robolectric tests.
+
             alias("hilt-android-testing").to("com.google.dagger:hilt-android-testing:$HILT_TESTING_VERSION")
             alias("hilt-android-compiler").to("com.google.dagger:hilt-android-compiler:$HILT_TESTING_VERSION")
             alias("junit-ktx").to("androidx.test.ext:junit-ktx:$JUNIT_KTX")
             alias("test-runner").to("androidx.test:runner:$RUNNER_VERSION")
-            alias("retrofit")to( "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION")
-            alias("retrofit-gson").to( "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION")
+            alias("retrofit") to("com.squareup.retrofit2:retrofit:$RETROFIT_VERSION")
+            alias("retrofit-gson").to("com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION")
             alias("junit").to("junit:junit:$JUNIT_VERSION")
 
 
-
+            alias("compose-navigation").to("androidx.navigation:navigation-compose:$NAV_VERSION")
 
         }
     }

@@ -1,4 +1,4 @@
-package com.example.psaweathertest.ui.theme
+package com.example.psaweathertest.presentation.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
