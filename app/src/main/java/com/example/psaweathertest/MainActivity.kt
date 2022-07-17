@@ -10,7 +10,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.psaweathertest.ui.theme.PSAWeatherTestTheme
+import com.example.psaweathertest.presentation.Navigation
+import com.example.psaweathertest.presentation.ui.theme.PSAWeatherTestTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+             Navigation()
                 }
             }
         }

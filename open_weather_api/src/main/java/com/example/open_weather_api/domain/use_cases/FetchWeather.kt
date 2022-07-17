@@ -7,11 +7,11 @@ import javax.inject.Inject
 
 class FetchWeather @Inject constructor(private val weatherRepository: WeatherRepository) {
 
-    operator fun invoke(lat: String, lon: String) = flow {
+    operator fun invoke(city: String) = flow {
         emit(APIResult.Loading())
 
         try {
-            val weatherDetails = weatherRepository.getWeatherDetails(lat = lat, lon = lon)
+            val weatherDetails = weatherRepository.getWeatherDetails(city = city)
 
             emit(APIResult.Success(weatherDetails))
         } catch (exception: Exception) {
