@@ -52,8 +52,13 @@ dependencies {
 
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.android)
+
+
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+
 
 
 }
