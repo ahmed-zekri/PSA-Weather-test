@@ -1,6 +1,6 @@
-package com.example.open_weather_api.data
+package com.example.open_weather_api.data.dto
 
-data class WeatherX(
+data class Weather(
     val description: String,
     val icon: String,
     val id: Int,

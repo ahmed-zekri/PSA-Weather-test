@@ -1,7 +1,7 @@
 package com.example.open_weather_api.data.di
 
 import com.example.open_weather_api.common.BASE_URL
-import com.example.open_weather_api.remote.WeatherApi
+import com.example.open_weather_api.data.remote.WeatherApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
