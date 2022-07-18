@@ -1,11 +1,11 @@
 package com.example.open_weather_api.domain.use_cases
 
-import com.example.open_weather_api.domain.repositories.WeatherRepository
+import com.example.open_weather_api.domain.repositories.RemoteWeatherRepository
 import javax.inject.Inject
 
-class FetchWeather @Inject constructor(private val weatherRepository: WeatherRepository) {
+class FetchWeather @Inject constructor(private val remoteWeatherRepository: RemoteWeatherRepository) {
 
-    suspend operator fun invoke(city: String) = weatherRepository.getWeatherDetails(city = city)
+    suspend operator fun invoke(city: String) = remoteWeatherRepository.getWeatherDetails(city = city)
 
 }
 

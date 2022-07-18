@@ -1,7 +1,7 @@
 package com.example.open_weather_api.data.di
 
-import com.example.open_weather_api.data.repositories.WeatherRepositoryImpl
-import com.example.open_weather_api.domain.repositories.WeatherRepository
+import com.example.open_weather_api.data.repositories.RemoteRemoteWeatherRepositoryImpl
+import com.example.open_weather_api.domain.repositories.RemoteWeatherRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -14,5 +14,5 @@ abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun providesWeatherRepository(weatherRepositoryImpl: WeatherRepositoryImpl): WeatherRepository
+    abstract fun providesWeatherRepository(remoteWeatherRepositoryImpl: RemoteRemoteWeatherRepositoryImpl): RemoteWeatherRepository
 }

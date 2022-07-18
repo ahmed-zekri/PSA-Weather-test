@@ -6,7 +6,7 @@ import com.example.psaweathertest.domain.repositories.WeatherRepository
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
-class FindWeatherByCityName @Inject constructor(
+class FindAndUpdateWeatherByCityName @Inject constructor(
     private val weatherRepository: WeatherRepository,
     private val errorHandler: ErrorHandler
 ) {
