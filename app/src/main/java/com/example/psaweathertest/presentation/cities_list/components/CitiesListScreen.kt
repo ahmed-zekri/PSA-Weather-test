@@ -1,16 +1,15 @@
 package com.example.psaweathertest.presentation.cities_list.components
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Button
+import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.example.psaweathertest.presentation.Screen
@@ -22,10 +21,32 @@ fun CitiesListScreen(
     citiesListViewModel: CitiesListViewModel = hiltViewModel()
 ) {
     Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
+        
         LazyColumn(Modifier.align(CenterHorizontally)) {
             items(citiesListViewModel.citiesWeatherList.value) {
 
-                Text(text = it.city)
+                Card(
+                    modifier = Modifier
+                        .padding(10.dp)
+                        .fillMaxWidth(),
+                    elevation = 12.dp
+                ) {
+                    Row(horizontalArrangement = Arrangement.SpaceBetween) {
+                        Text(
+                            text = it.city,
+                            modifier = Modifier.padding(16.dp)
+                        )
+                        Text(
+                            text = it.description,
+                            modifier = Modifier.padding(16.dp)
+                        )
+                        Text(
+                            text = it.main,
+                            modifier = Modifier.padding(16.dp)
+                        )
+                    }
+
+                }
 
             }
 
