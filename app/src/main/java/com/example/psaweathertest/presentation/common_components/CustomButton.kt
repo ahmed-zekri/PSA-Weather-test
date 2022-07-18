@@ -8,11 +8,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 
 @Composable
-fun CustomButton(text: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
+fun CustomButton(
+    text: String,
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit,
+    enabled: Boolean=true
+) {
     Button(
         modifier = modifier, onClick = {
             onClick()
-        },
+        }, enabled = enabled,
         colors = ButtonDefaults.buttonColors(backgroundColor = Color.DarkGray)
     )
 
