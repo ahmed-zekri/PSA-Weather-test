@@ -1,4 +1,4 @@
-package com.example.psaweathertest.use_case
+package com.example.psaweathertest.domain.use_case
 
 import com.example.psaweathertest.common.ErrorHandler
 import com.example.psaweathertest.common.Resources

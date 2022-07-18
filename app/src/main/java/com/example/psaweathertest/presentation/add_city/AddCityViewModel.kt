@@ -4,10 +4,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.psaweathertest.common.Resources
-import com.example.psaweathertest.domain.repositories.WeatherRepository
-import com.example.psaweathertest.use_case.FindAndUpdateWeatherByCityName
+import com.example.psaweathertest.domain.use_case.FindAndUpdateWeatherByCityName
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
