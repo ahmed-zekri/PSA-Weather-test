@@ -3,6 +3,7 @@ package com.example.psaweathertest.data.di
 import com.example.psaweathertest.common.ErrorHandler
 import com.example.psaweathertest.domain.repositories.WeatherRepository
 import com.example.psaweathertest.domain.use_case.FindAndUpdateWeatherByCityName
+import com.example.psaweathertest.domain.use_case.GetAllStoredWeatherDetails
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,6 +21,15 @@ class UseCaseModule {
         errorHandler: ErrorHandler
     ): FindAndUpdateWeatherByCityName =
         FindAndUpdateWeatherByCityName(weatherRepository, errorHandler)
+
+
+    @Provides
+    @Singleton
+    fun providesGetAllStoredWeatherDetails(
+        weatherRepository: WeatherRepository,
+
+        ): GetAllStoredWeatherDetails =
+        GetAllStoredWeatherDetails(weatherRepository)
 
 
 }
