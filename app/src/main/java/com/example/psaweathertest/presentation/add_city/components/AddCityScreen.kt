@@ -35,7 +35,7 @@ fun AddCityScreen(
 
                 )
             CustomButton(text = "Add city", modifier = Modifier.align(CenterHorizontally)) {
-
+addCityViewModel.searchCity()
             }
         }
 

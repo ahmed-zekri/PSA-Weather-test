@@ -1,8 +1,10 @@
 package com.example.psaweathertest.data.di
 
 import android.app.Application
+import android.content.Context
 import androidx.room.Room
 import com.example.psaweathertest.common.DATABASE_NAME
+import com.example.psaweathertest.data.data_source.WeatherDao
 import com.example.psaweathertest.data.data_source.WeatherDatabase
 import dagger.Module
 import dagger.Provides
@@ -17,6 +19,12 @@ class DatabaseModule {
 
     @Provides
     @Singleton
-    fun providesDatabase(@ApplicationContext application: Application): WeatherDatabase =
-        Room.databaseBuilder(application, WeatherDatabase::class.java, DATABASE_NAME).build()
+    fun providesDatabase(app:Application): WeatherDatabase =
+        Room.databaseBuilder(app, WeatherDatabase::class.java, DATABASE_NAME).build()
+
+    @Provides
+    @Singleton
+    fun providesWeatherDao(weatherDatabase: WeatherDatabase): WeatherDao {
+        return weatherDatabase.weatherDao
+    }
 }

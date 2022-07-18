@@ -23,12 +23,5 @@ class UseCaseModule {
     ): FindAndUpdateWeatherByCityName =
         FindAndUpdateWeatherByCityName(weatherRepository, errorHandler)
 
-    @Provides
-    @Singleton
-    fun providesFetchWeather(
-        remoteWeatherRepository:
-        RemoteWeatherRepository
-    ): FetchWeather =
-        FetchWeather(remoteWeatherRepository = remoteWeatherRepository)
 
 }

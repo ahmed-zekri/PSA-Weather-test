@@ -10,7 +10,7 @@ class FindAndUpdateWeatherByCityName @Inject constructor(
     private val weatherRepository: WeatherRepository,
     private val errorHandler: ErrorHandler
 ) {
-    suspend operator fun invoke(city: String) = flow {
+    operator fun invoke(city: String) = flow {
 
         emit(Resources.Loading())
         try {
