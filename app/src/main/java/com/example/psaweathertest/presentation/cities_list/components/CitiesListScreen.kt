@@ -6,6 +6,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Button
 import androidx.compose.material.Card
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
@@ -21,6 +22,7 @@ import com.example.psaweathertest.presentation.Screen
 import com.example.psaweathertest.presentation.cities_list.CitiesListViewModel
 import com.example.psaweathertest.presentation.common_components.CustomButton
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun CitiesListScreen(
     navHostController: NavHostController,
@@ -36,7 +38,10 @@ fun CitiesListScreen(
                     modifier = Modifier
                         .padding(10.dp)
                         .fillMaxWidth(),
-                    elevation = 12.dp, backgroundColor = Color.LightGray
+                    elevation = 12.dp, backgroundColor = Color.LightGray, onClick = {
+
+                        navHostController.navigate(Screen.CityWeather(it.city).route)
+                    }
                 ) {
                     Row(horizontalArrangement = Arrangement.SpaceBetween) {
                         Row {

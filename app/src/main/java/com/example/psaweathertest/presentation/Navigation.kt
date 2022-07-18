@@ -1,5 +1,6 @@
 package com.example.psaweathertest.presentation
 
+import CityDetails
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
@@ -20,11 +21,11 @@ fun Navigation() {
         }
 
         composable(route = Screen.AddCity.route) {
-AddCityScreen(navController)
+            AddCityScreen(navController)
 
         }
         composable(route = Screen.CityWeather("{$CITY_PARAM}").route) {
-
+            CityDetails(navController)
 
         }
 

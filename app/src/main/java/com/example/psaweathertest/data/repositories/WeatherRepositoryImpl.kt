@@ -30,4 +30,7 @@ class WeatherRepositoryImpl @Inject constructor(
         return dao.getDataByCityName(cityName)
 
     }
+
+    override suspend fun getLocalWeatherDataByCityName(cityName: String) =
+        dao.getDataByCityName(cityName)
 }
