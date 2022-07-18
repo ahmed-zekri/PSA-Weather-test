@@ -7,19 +7,8 @@ import javax.inject.Inject
 
 class FetchWeather @Inject constructor(private val weatherRepository: WeatherRepository) {
 
-    operator fun invoke(city: String) = flow {
-        emit(APIResult.Loading())
-
-        try {
-            val weatherDetails = weatherRepository.getWeatherDetails(city = city)
-
-            emit(APIResult.Success(weatherDetails))
-        } catch (exception: Exception) {
-            emit(APIResult.Error(exception.message ?: ""))
-        }
-
-
-    }
-
+    suspend operator fun invoke(city: String) = weatherRepository.getWeatherDetails(city = city)
 
 }
+
+

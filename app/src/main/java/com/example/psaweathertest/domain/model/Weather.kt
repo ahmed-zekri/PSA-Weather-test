@@ -9,12 +9,12 @@ data class Weather(
     val main: String,
     val description: String,
     val icon: String,
-    val temp: Int,
-    val temp_min: Int,
-    val temp_max: Int,
+    val temp: Double,
+    val temp_min: Double,
+    val temp_max: Double,
     val pressure: Int,
     val humidity: Int,
-    val windSpeed: Int,
+    val windSpeed: Double,
     val windDegree: Int,
     @PrimaryKey val id: Int? = null
 )
