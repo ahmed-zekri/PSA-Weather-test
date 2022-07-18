@@ -7,6 +7,6 @@ interface WeatherRepository {
 
     fun getAllWeatherData(): Flow<List<Weather>>
     suspend fun insertWeatherData(weather: Weather)
-    suspend fun findAndUpdateWeatherDataByCityName(cityName: String): Weather?
+    suspend fun synchronizeDatabaseWithRemoteServer(cityName: String): Weather?
     suspend fun getLocalWeatherDataByCityName(cityName: String): Weather?
 }

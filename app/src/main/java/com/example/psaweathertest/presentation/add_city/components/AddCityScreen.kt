@@ -49,7 +49,6 @@ fun AddCityScreen(
 
 
 
-
         Column(Modifier.align(Center)) {
 
 
@@ -65,7 +64,7 @@ fun AddCityScreen(
                 )
             CustomButton(
                 text = "Submit",
-                enabled = addCityViewModel.cityName.value.length > 1,
+                enabled = addCityViewModel.cityName.value.trim().length > 1,
                 modifier = Modifier.align(CenterHorizontally),
                 onClick = {
                     addCityViewModel.searchAndSaveCity()

@@ -16,7 +16,7 @@ class WeatherRepositoryImpl @Inject constructor(
 
     override suspend fun insertWeatherData(weather: Weather) = dao.insertData(weather)
 
-    override suspend fun findAndUpdateWeatherDataByCityName(cityName: String): Weather? {
+    override suspend fun synchronizeDatabaseWithRemoteServer(cityName: String): Weather? {
 
 
         val weather = fetchWeather(cityName)

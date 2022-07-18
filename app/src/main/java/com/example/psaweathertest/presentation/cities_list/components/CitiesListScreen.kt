@@ -31,7 +31,7 @@ fun CitiesListScreen(
     val context = LocalContext.current
     Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
 
-        LazyColumn(Modifier.align(CenterHorizontally)) {
+        LazyColumn(Modifier.align(CenterHorizontally).height(600.dp)) {
             items(citiesListViewModel.citiesWeatherList.value) {
 
                 Card(

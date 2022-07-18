@@ -14,7 +14,7 @@ class FindAndUpdateWeatherByCityName @Inject constructor(
 
         emit(Resources.Loading())
         try {
-            val weatherDetail = weatherRepository.findAndUpdateWeatherDataByCityName(city)
+            val weatherDetail = weatherRepository.synchronizeDatabaseWithRemoteServer(city)
             emit(Resources.Success(weatherDetail))
         } catch (e: Exception) {
             emit(Resources.Error(errorHandler.handleException(e)))
