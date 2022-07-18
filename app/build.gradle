@@ -59,6 +59,8 @@ dependencies {
     implementation(libs.compose.tooling)
     implementation(libs.hilt.navigation.compose)
     implementation(libs.compose.navigation)
+    implementation(libs.room)
+    annotationProcessor(libs.room.compiler)
 
 
     kapt(libs.hilt.compiler)

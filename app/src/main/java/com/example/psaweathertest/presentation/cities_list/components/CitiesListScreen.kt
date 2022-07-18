@@ -11,16 +11,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import com.example.psaweathertest.presentation.Screen
 
 @Composable
-fun CitiesList(navHostController: NavHostController) {
+fun CitiesListScreen(navHostController: NavHostController) {
     Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
         LazyColumn(Modifier.align(CenterHorizontally)) {
 
 
         }
         Row(Modifier.align(CenterHorizontally)) {
-            Button(onClick = { /*TODO*/ }) {
+            Button(onClick = {
+navHostController.navigate(Screen.AddCity.route)
+
+
+            }) {
                 Text(text = "Add city")
             }
 

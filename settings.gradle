@@ -56,9 +56,10 @@ dependencyResolutionManagement {
             alias("retrofit") to("com.squareup.retrofit2:retrofit:$RETROFIT_VERSION")
             alias("retrofit-gson").to("com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION")
             alias("junit").to("junit:junit:$JUNIT_VERSION")
-
-
             alias("compose-navigation").to("androidx.navigation:navigation-compose:$NAV_VERSION")
+            alias("room").to("androidx.room:room-runtime:$ROOM_VERSION")
+            alias("room-compiler").to("androidx.room:room-compiler:$ROOM_VERSION")
+
 
         }
     }
