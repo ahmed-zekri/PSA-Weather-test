@@ -21,4 +21,8 @@ interface WeatherDao {
     suspend fun insertData(weather: Weather)
 
 
+
+
+
+
 }

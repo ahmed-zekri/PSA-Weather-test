@@ -6,5 +6,5 @@ import kotlinx.coroutines.flow.Flow
 interface WeatherRepository {
     fun getAllWeatherData(): Flow<List<Weather>>
     suspend fun insertWeatherData(weather: Weather)
-    suspend fun findWeatherDataByCityName(cityName: String): Weather?
+    suspend fun findAndUpdateWeatherDataByCityName(cityName: String): Weather?
 }

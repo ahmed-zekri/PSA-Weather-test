@@ -9,28 +9,25 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class WeatherRepositoryImpl @Inject constructor(
-    val fetchWeather: FetchWeather,
-    val dao: WeatherDao
+    private val fetchWeather: FetchWeather,
+    private val dao: WeatherDao
 ) : WeatherRepository {
     override fun getAllWeatherData(): Flow<List<Weather>> = dao.getData()
 
     override suspend fun insertWeatherData(weather: Weather) = dao.insertData(weather)
 
-    override suspend fun findWeatherDataByCityName(cityName: String): Weather? {
-
-        try {
-            val weather = fetchWeather(cityName)
-            weather?.apply {
-
-                dao.insertData(toWeather())
-            }
-
-        } catch (e: Exception) {
+    override suspend fun findAndUpdateWeatherDataByCityName(cityName: String): Weather? {
 
 
+        val weather = fetchWeather(cityName)
+        weather?.apply {
+
+            dao.insertData(toWeather())
+            return toWeather()
         }
-        return dao.getDataByCityName(cityName)
 
+
+        return dao.getDataByCityName(cityName)
 
     }
 }

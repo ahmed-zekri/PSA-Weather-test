@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class Weather(
-    val city: String,
+    @PrimaryKey val city: String,
     val main: String,
     val description: String,
     val icon: String,
@@ -15,6 +15,6 @@ data class Weather(
     val pressure: Int,
     val humidity: Int,
     val windSpeed: Double,
-    val windDegree: Int,
-    @PrimaryKey val id: Int? = null
+    val windDegree: Int
+
 )
