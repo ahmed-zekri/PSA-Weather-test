@@ -6,15 +6,17 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.psaweathertest.common.CITY_PARAM
+import com.example.psaweathertest.common.Resources
 import com.example.psaweathertest.domain.model.Weather
-import com.example.psaweathertest.domain.use_case.GetStoredWeatherDetailsByName
+import com.example.psaweathertest.domain.use_case.FindAndUpdateWeatherByCityName
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 @HiltViewModel
 class CityDetailsViewModel @Inject constructor(
-    getStoredWeatherDetailsByName: GetStoredWeatherDetailsByName,
+    findAndUpdateWeatherByCityName: FindAndUpdateWeatherByCityName,
     savedStateHandle: SavedStateHandle
 
 ) : ViewModel() {
@@ -24,11 +26,19 @@ class CityDetailsViewModel @Inject constructor(
     init {
         savedStateHandle.get<String>(CITY_PARAM)?.let {
 
-            viewModelScope.launch {
 
-                _weatherDetails.value = getStoredWeatherDetailsByName(it)
+            findAndUpdateWeatherByCityName(it).onEach { weather ->
+                when (weather) {
+                    is Resources.Success -> _weatherDetails.value = weather.data
 
-            }
+
+                    else -> {}
+                }
+
+
+            }.launchIn(viewModelScope)
+
+
         }
     }
 }

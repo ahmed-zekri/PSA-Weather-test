@@ -23,7 +23,7 @@ class AddCityViewModel @Inject constructor(private val findAndUpdateWeatherByCit
 
             is Resources.Error -> _cityWeatherState.value = CityWeatherState(error = it.message)
             is Resources.Success -> _cityWeatherState.value =
-                CityWeatherState(weatherData = it.data)
+                CityWeatherState(weatherData = it.data, error = it.warning)
             is Resources.Loading -> _cityWeatherState.value = CityWeatherState(loading = true)
 
         }

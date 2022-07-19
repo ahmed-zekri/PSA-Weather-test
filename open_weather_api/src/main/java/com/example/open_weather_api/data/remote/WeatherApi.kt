@@ -10,7 +10,7 @@ import retrofit2.http.Query
 interface WeatherApi {
 
 
-    @GET("/data/2.5/weather/")
+    @GET("/data/2.5/weather?units=metric")
     suspend fun getWeatherDetails(
         @Query("q") city: String,
 

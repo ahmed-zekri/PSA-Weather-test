@@ -37,7 +37,7 @@ fun AddCityScreen(
             }
         else if (addCityViewModel.cityWeatherState.value.weatherData != null) {
             LaunchedEffect(key1 = true) {
-                Toast.makeText(context, "City added successfully", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Data updated successfully", Toast.LENGTH_SHORT).show()
                 navHostController.navigate(Screen.CitiesList.route)
             }
 
