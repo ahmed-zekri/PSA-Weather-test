@@ -11,8 +11,18 @@ interface WeatherApi {
 
 
     @GET("/data/2.5/weather?units=metric")
-    suspend fun getWeatherDetails(
+    suspend fun getWeatherDetailsByCityName(
         @Query("q") city: String,
+
+
+        @Query("appid") appid: String = API_KEY.ifBlank { throw IllegalStateException("You must provide a valid api key") }
+    ):WeatherDTO
+
+
+    @GET("/data/2.5/onecall?units=metric")
+    suspend fun getWeatherDetailsByCoordinates(
+        @Query("lat") city: Double,
+        @Query("lon") lon: Double,
 
 
         @Query("appid") appid: String = API_KEY.ifBlank { throw IllegalStateException("You must provide a valid api key") }
