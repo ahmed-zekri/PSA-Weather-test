@@ -1,0 +1,92 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:com.example.open_weather_api.common////PointingToDeclaration/open_weather_api/com.example.open_weather_api.common/index.html
+$dokka.location:com.example.open_weather_api.common//API_KEY/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.common/-a-p-i_-k-e-y.html
+$dokka.location:com.example.open_weather_api.common//BASE_URL/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.common/-b-a-s-e_-u-r-l.html
+$dokka.location:com.example.open_weather_api.data.di////PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.di/index.html
+$dokka.location:com.example.open_weather_api.data.di/RemoteModule///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.di/-remote-module/index.html
+$dokka.location:com.example.open_weather_api.data.di/RemoteModule/RemoteModule/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.di/-remote-module/-remote-module.html
+$dokka.location:com.example.open_weather_api.data.di/RemoteModule/providesApi/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.di/-remote-module/provides-api.html
+$dokka.location:com.example.open_weather_api.data.di/RepositoryModule///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.di/-repository-module/index.html
+$dokka.location:com.example.open_weather_api.data.di/RepositoryModule/RepositoryModule/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.di/-repository-module/-repository-module.html
+$dokka.location:com.example.open_weather_api.data.di/RepositoryModule/providesWeatherRepository/#com.example.open_weather_api.data.repositories.RemoteRemoteWeatherRepositoryImpl/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.di/-repository-module/provides-weather-repository.html
+$dokka.location:com.example.open_weather_api.data.di/UseCaseModule///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.di/-use-case-module/index.html
+$dokka.location:com.example.open_weather_api.data.di/UseCaseModule/UseCaseModule/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.di/-use-case-module/-use-case-module.html
+$dokka.location:com.example.open_weather_api.data.di/UseCaseModule/providesUseCase/#com.example.open_weather_api.domain.repositories.RemoteWeatherRepository/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.di/-use-case-module/provides-use-case.html
+$dokka.location:com.example.open_weather_api.data.dto////PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/index.html
+$dokka.location:com.example.open_weather_api.data.dto/Clouds///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-clouds/index.html
+$dokka.location:com.example.open_weather_api.data.dto/Clouds/Clouds/#kotlin.Int/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-clouds/-clouds.html
+$dokka.location:com.example.open_weather_api.data.dto/Clouds/all/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-clouds/all.html
+$dokka.location:com.example.open_weather_api.data.dto/Coord///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-coord/index.html
+$dokka.location:com.example.open_weather_api.data.dto/Coord/Coord/#kotlin.Double#kotlin.Double/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-coord/-coord.html
+$dokka.location:com.example.open_weather_api.data.dto/Coord/lat/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-coord/lat.html
+$dokka.location:com.example.open_weather_api.data.dto/Coord/lon/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-coord/lon.html
+$dokka.location:com.example.open_weather_api.data.dto/Main///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-main/index.html
+$dokka.location:com.example.open_weather_api.data.dto/Main/Main/#kotlin.Double#kotlin.Int#kotlin.Int#kotlin.Double#kotlin.Double#kotlin.Double/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-main/-main.html
+$dokka.location:com.example.open_weather_api.data.dto/Main/feels_like/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-main/feels_like.html
+$dokka.location:com.example.open_weather_api.data.dto/Main/humidity/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-main/humidity.html
+$dokka.location:com.example.open_weather_api.data.dto/Main/pressure/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-main/pressure.html
+$dokka.location:com.example.open_weather_api.data.dto/Main/temp/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-main/temp.html
+$dokka.location:com.example.open_weather_api.data.dto/Main/temp_max/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-main/temp_max.html
+$dokka.location:com.example.open_weather_api.data.dto/Main/temp_min/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-main/temp_min.html
+$dokka.location:com.example.open_weather_api.data.dto/Sys///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-sys/index.html
+$dokka.location:com.example.open_weather_api.data.dto/Sys/Sys/#kotlin.String#kotlin.Int#kotlin.Int#kotlin.Int#kotlin.Int/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-sys/-sys.html
+$dokka.location:com.example.open_weather_api.data.dto/Sys/country/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-sys/country.html
+$dokka.location:com.example.open_weather_api.data.dto/Sys/id/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-sys/id.html
+$dokka.location:com.example.open_weather_api.data.dto/Sys/sunrise/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-sys/sunrise.html
+$dokka.location:com.example.open_weather_api.data.dto/Sys/sunset/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-sys/sunset.html
+$dokka.location:com.example.open_weather_api.data.dto/Sys/type/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-sys/type.html
+$dokka.location:com.example.open_weather_api.data.dto/Weather///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather/index.html
+$dokka.location:com.example.open_weather_api.data.dto/Weather/Weather/#kotlin.String#kotlin.String#kotlin.Int#kotlin.String/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather/-weather.html
+$dokka.location:com.example.open_weather_api.data.dto/Weather/description/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather/description.html
+$dokka.location:com.example.open_weather_api.data.dto/Weather/icon/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather/icon.html
+$dokka.location:com.example.open_weather_api.data.dto/Weather/id/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather/id.html
+$dokka.location:com.example.open_weather_api.data.dto/Weather/main/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather/main.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/index.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/WeatherDTO/#kotlin.String#com.example.open_weather_api.data.dto.Clouds#kotlin.Int#com.example.open_weather_api.data.dto.Coord#kotlin.Int#kotlin.Int#com.example.open_weather_api.data.dto.Main#kotlin.String#com.example.open_weather_api.data.dto.Sys#kotlin.Int#kotlin.Int#kotlin.collections.List[com.example.open_weather_api.data.dto.Weather]#com.example.open_weather_api.data.dto.Wind/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/-weather-d-t-o.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/base/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/base.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/clouds/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/clouds.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/cod/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/cod.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/coord/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/coord.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/dt/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/dt.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/id/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/id.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/main/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/main.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/name/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/name.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/sys/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/sys.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/timezone/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/timezone.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/visibility/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/visibility.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/weather/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/weather.html
+$dokka.location:com.example.open_weather_api.data.dto/WeatherDTO/wind/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-weather-d-t-o/wind.html
+$dokka.location:com.example.open_weather_api.data.dto/Wind///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-wind/index.html
+$dokka.location:com.example.open_weather_api.data.dto/Wind/Wind/#kotlin.Int#kotlin.Double/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-wind/-wind.html
+$dokka.location:com.example.open_weather_api.data.dto/Wind/deg/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-wind/deg.html
+$dokka.location:com.example.open_weather_api.data.dto/Wind/speed/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.dto/-wind/speed.html
+$dokka.location:com.example.open_weather_api.data.remote////PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.remote/index.html
+$dokka.location:com.example.open_weather_api.data.remote/WeatherApi///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.remote/-weather-api/index.html
+$dokka.location:com.example.open_weather_api.data.remote/WeatherApi/getWeatherDetailsByCityName/#kotlin.String#kotlin.String/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.remote/-weather-api/get-weather-details-by-city-name.html
+$dokka.location:com.example.open_weather_api.data.remote/WeatherApi/getWeatherDetailsByCoordinates/#kotlin.Double#kotlin.Double#kotlin.String/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.remote/-weather-api/get-weather-details-by-coordinates.html
+$dokka.location:com.example.open_weather_api.data.repositories////PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.repositories/index.html
+$dokka.location:com.example.open_weather_api.data.repositories/RemoteRemoteWeatherRepositoryImpl///PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.repositories/-remote-remote-weather-repository-impl/index.html
+$dokka.location:com.example.open_weather_api.data.repositories/RemoteRemoteWeatherRepositoryImpl/RemoteRemoteWeatherRepositoryImpl/#com.example.open_weather_api.data.remote.WeatherApi/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.repositories/-remote-remote-weather-repository-impl/-remote-remote-weather-repository-impl.html
+$dokka.location:com.example.open_weather_api.data.repositories/RemoteRemoteWeatherRepositoryImpl/getWeatherDetailsByCityName/#kotlin.String/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.repositories/-remote-remote-weather-repository-impl/get-weather-details-by-city-name.html
+$dokka.location:com.example.open_weather_api.data.repositories/RemoteRemoteWeatherRepositoryImpl/getWeatherDetailsByCoordinates/#kotlin.Double#kotlin.Double/PointingToDeclaration/open_weather_api/com.example.open_weather_api.data.repositories/-remote-remote-weather-repository-impl/get-weather-details-by-coordinates.html
+$dokka.location:com.example.open_weather_api.domain.repositories////PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.repositories/index.html
+$dokka.location:com.example.open_weather_api.domain.repositories/RemoteWeatherRepository///PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.repositories/-remote-weather-repository/index.html
+$dokka.location:com.example.open_weather_api.domain.repositories/RemoteWeatherRepository/getWeatherDetailsByCityName/#kotlin.String/PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.repositories/-remote-weather-repository/get-weather-details-by-city-name.html
+$dokka.location:com.example.open_weather_api.domain.repositories/RemoteWeatherRepository/getWeatherDetailsByCoordinates/#kotlin.Double#kotlin.Double/PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.repositories/-remote-weather-repository/get-weather-details-by-coordinates.html
+$dokka.location:com.example.open_weather_api.domain.use_cases////PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.use_cases/index.html
+$dokka.location:com.example.open_weather_api.domain.use_cases/FetchWeather///PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.use_cases/-fetch-weather/index.html
+$dokka.location:com.example.open_weather_api.domain.use_cases/FetchWeather/FetchWeather/#com.example.open_weather_api.domain.repositories.RemoteWeatherRepository/PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.use_cases/-fetch-weather/-fetch-weather.html
+$dokka.location:com.example.open_weather_api.domain.use_cases/FetchWeather/invoke/#kotlin.Any#com.example.open_weather_api.domain.use_cases.FetchingMethod/PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.use_cases/-fetch-weather/invoke.html
+$dokka.location:com.example.open_weather_api.domain.use_cases/FetchWeather/remoteWeatherRepository/#/PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.use_cases/-fetch-weather/remote-weather-repository.html
+$dokka.location:com.example.open_weather_api.domain.use_cases/FetchingMethod.BY_COORDINATES///PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.use_cases/-fetching-method/-b-y_-c-o-o-r-d-i-n-a-t-e-s/index.html
+$dokka.location:com.example.open_weather_api.domain.use_cases/FetchingMethod.BY_NAME///PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.use_cases/-fetching-method/-b-y_-n-a-m-e/index.html
+$dokka.location:com.example.open_weather_api.domain.use_cases/FetchingMethod///PointingToDeclaration/open_weather_api/com.example.open_weather_api.domain.use_cases/-fetching-method/index.html
+com.example.open_weather_api.common
+com.example.open_weather_api.data.di
+com.example.open_weather_api.data.dto
+com.example.open_weather_api.data.remote
+com.example.open_weather_api.data.repositories
+com.example.open_weather_api.domain.repositories
+com.example.open_weather_api.domain.use_cases
+

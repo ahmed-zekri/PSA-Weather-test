@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'org.jetbrains.dokka'
 }
 
 android {
@@ -42,12 +43,13 @@ android {
         }
     }
 }
+tasks.dokkaHtml.configure {
+
+    outputDirectory.set(file("../documentation/html"))
+}
 
 dependencies {
     implementation(libs.core.ktx)
-
-
-
 
 
     kapt(libs.hilt.compiler)
