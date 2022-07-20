@@ -15,19 +15,56 @@ import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 @HiltViewModel
-class CitiesListViewModel @Inject constructor(getAllStoredWeatherDetails: GetAllStoredWeatherDetails) :
+class CitiesListViewModel @Inject constructor(val getAllStoredWeatherDetails: GetAllStoredWeatherDetails) :
     ViewModel() {
 
     private val _citiesWeatherListState = mutableStateOf(listOf<Weather>())
+    val citiesWeatherListState: State<List<Weather>> = _citiesWeatherListState
+
+    private val _citiesWeatherListOrderTypeState =
+        mutableStateOf<CitiesWeatherDetailsOrderType>(CitiesWeatherDetailsOrderType.Ascending)
+
+
+    private val _citiesWeatherListOrderState =
+        mutableStateOf<CitiesWeatherDetailsOrder>(
+            CitiesWeatherDetailsOrder.CityName(
+                CitiesWeatherDetailsOrderType.Ascending
+            )
+        )
+
+
     val citiesWeatherList: State<List<Weather>> = _citiesWeatherListState
 
     init {
-        getAllStoredWeatherDetails(CitiesWeatherDetailsOrder.CityName(CitiesWeatherDetailsOrderType.Ascending)).onEach { result ->
+        getList()
+
+    }
+
+    fun getList() {
+        getAllStoredWeatherDetails(
+            if (_citiesWeatherListOrderState.value is CitiesWeatherDetailsOrder.CityName)
+                CitiesWeatherDetailsOrder.CityName(_citiesWeatherListOrderTypeState.value)
+            else
+                CitiesWeatherDetailsOrder.Temp(_citiesWeatherListOrderTypeState.value)
+
+
+        ).onEach { result ->
 
             _citiesWeatherListState.value = result
         }.launchIn(viewModelScope)
 
     }
 
+    fun updateOrderTypeState(orderType: CitiesWeatherDetailsOrderType) {
+
+        _citiesWeatherListOrderTypeState.value = orderType
+
+    }
+
+    fun updateOrderState(orderType: CitiesWeatherDetailsOrder) {
+
+        _citiesWeatherListOrderState.value = orderType
+
+    }
 
 }

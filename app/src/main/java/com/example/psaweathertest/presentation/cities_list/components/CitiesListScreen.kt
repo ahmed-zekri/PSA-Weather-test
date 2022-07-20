@@ -4,11 +4,11 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.Button
 import androidx.compose.material.Card
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -18,6 +18,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import com.example.psaweathertest.common.getImageIdByName
+import com.example.psaweathertest.domain.use_case.utils.CitiesWeatherDetailsOrder
+import com.example.psaweathertest.domain.use_case.utils.CitiesWeatherDetailsOrderType
 import com.example.psaweathertest.presentation.Screen
 import com.example.psaweathertest.presentation.cities_list.CitiesListViewModel
 import com.example.psaweathertest.presentation.common_components.CustomButton
@@ -29,37 +31,68 @@ fun CitiesListScreen(
     citiesListViewModel: CitiesListViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
-    Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.SpaceBetween) {
+    Column(modifier = Modifier.fillMaxSize()) {
+        RadioButtonComponent(
+            radioOptions = listOf("By city name", "By temp")
 
-        LazyColumn(Modifier.align(CenterHorizontally).height(600.dp)) {
-            items(citiesListViewModel.citiesWeatherList.value) {
+        ) {
+            citiesListViewModel.updateOrderState(
+                if (contains("name"))
+                    CitiesWeatherDetailsOrder.CityName() else CitiesWeatherDetailsOrder.Temp()
+            )
 
-                Card(
-                    modifier = Modifier
-                        .padding(10.dp)
-                        .fillMaxWidth(),
-                    elevation = 12.dp, backgroundColor = Color.LightGray, onClick = {
+            citiesListViewModel.getList()
+        }
 
-                        navHostController.navigate(Screen.CityWeather(it.city).route)
-                    }
-                ) {
-                    Row(horizontalArrangement = Arrangement.SpaceBetween) {
-                        Row {
-                            Text(
-                                text = it.city,
-                                modifier = Modifier.padding(16.dp)
-                            )
+        RadioButtonComponent(
+            radioOptions = listOf("Ascending", "Descending")
+
+        ) {
+
+            citiesListViewModel.updateOrderTypeState(
+                if (contains("Ascending"))
+                    CitiesWeatherDetailsOrderType.Ascending else CitiesWeatherDetailsOrderType.Descending
+            )
+            citiesListViewModel.getList()
+
+
+        }
+        if (citiesListViewModel.citiesWeatherListState.value.isNotEmpty())
+            LazyColumn(
+                Modifier
+                    .align(CenterHorizontally)
+                    .height(500.dp)
+            ) {
+                items(citiesListViewModel.citiesWeatherList.value) {
+
+                    Card(
+                        modifier = Modifier
+                            .padding(10.dp)
+                            .fillMaxWidth(),
+                        elevation = 12.dp, backgroundColor = Color.LightGray, onClick = {
+
+                            navHostController.navigate(Screen.CityWeather(it.city).route)
                         }
+                    ) {
                         Row(horizontalArrangement = Arrangement.SpaceBetween) {
-                            Text(
-                                text = it.description,
-                                modifier = Modifier.padding(15.dp)
-                            )
-                            Image(
-                                painterResource(id = context.getImageIdByName("a${it.icon}")),
-                                modifier = Modifier.padding(16.dp),
-                                contentDescription = "Weather icon"
-                            )
+                            Row {
+                                Text(
+                                    text = it.city,
+                                    modifier = Modifier.padding(16.dp)
+                                )
+                            }
+                            Row(horizontalArrangement = Arrangement.SpaceBetween) {
+                                Text(
+                                    text = it.description,
+                                    modifier = Modifier.padding(15.dp)
+                                )
+                                Image(
+                                    painterResource(id = context.getImageIdByName("a${it.icon}")),
+                                    modifier = Modifier.padding(16.dp),
+                                    contentDescription = "Weather icon"
+                                )
+                            }
+
                         }
 
                     }
@@ -67,8 +100,15 @@ fun CitiesListScreen(
                 }
 
             }
+        else
+            Text(
+                text = "No data found , please add a city by clicking on the button below",
+                modifier = Modifier
+                    .padding(horizontal = 20.dp)
+                    .align(CenterHorizontally)
+            )
 
-        }
+
         Row(Modifier.align(CenterHorizontally)) {
             CustomButton(onClick = {
                 navHostController.navigate(Screen.AddCity.route)
