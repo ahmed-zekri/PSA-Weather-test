@@ -1,14 +1,25 @@
 package com.example.psaweathertest.common
 
-import java.util.*
+import android.os.Build
+import java.time.Instant
+import java.time.ZoneId
+import kotlin.math.abs
 
-fun Int.toDate(): Date {
-    val d = Date()
-    val localTime = d.time
-    val localOffset = d.timezoneOffset * 60000
-    val utc = localTime + localOffset
-    val time = utc + (1000 * this)
-    return Date(time)
+
+fun Int.toDate(): String {
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        val utc = Instant.now()
+        val utcZoneDateTime = utc.atZone(ZoneId.of("UTC"))
+        val cityDateTime = utcZoneDateTime.plusSeconds(this.toLong())
+
+
+        "${cityDateTime.dayOfMonth.minTwoDigits()}/${cityDateTime.monthValue.minTwoDigits()}/${cityDateTime.year} ${cityDateTime.hour.minTwoDigits()}:${cityDateTime.minute.minTwoDigits()} GMT${if (this / 3600 < 0) "-" else "+"}${(this / 3600).minTwoDigits()}"
+
+    } else {
+        ""
+    }
 
 
 }
+
+fun Int.minTwoDigits() = (if (this / 10 < 1) "0" else "") + abs(this).toString()
