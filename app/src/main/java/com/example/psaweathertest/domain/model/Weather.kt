@@ -2,6 +2,7 @@ package com.example.psaweathertest.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.util.*
 
 @Entity
 data class Weather(
@@ -15,6 +16,7 @@ data class Weather(
     val pressure: Int,
     val humidity: Int,
     val windSpeed: Double,
-    val windDegree: Int
+    val windDegree: Int,
+    val time: String
 
 )

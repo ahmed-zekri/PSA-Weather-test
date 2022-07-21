@@ -14,6 +14,7 @@ fun WeatherDTO.toWeather() = Weather(
     temp = main.temp,
     windDegree = wind.deg,
     windSpeed = wind.speed, temp_max = main.temp_max,
-    temp_min = main.temp_min
+    temp_min = main.temp_min,
+    time = timezone.toDate().toString()
 
 )

@@ -7,11 +7,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.font.FontWeight.Companion.Light
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ExtraInfoRow(text: String) {
+fun ExtraInfoRow(text: String,fontWeight: FontWeight= Light) {
 
     Row(
         horizontalArrangement = Arrangement.Center,
@@ -21,7 +22,7 @@ fun ExtraInfoRow(text: String) {
     ) {
         Text(
             text = text,
-            fontWeight = Light
+            fontWeight = fontWeight
         )
     }
 }

@@ -29,7 +29,7 @@ fun CityDetails(
             .padding(50.dp)
     ) {
         if (cityDetailsViewModel.weatherDetails.value != null)
-            Column(modifier = Modifier.align(Alignment.Center)) {
+            Column {
                 Row(horizontalArrangement = Arrangement.SpaceBetween) {
                     Image(
                         painter = painterResource(id = context.getImageIdByName("a${cityDetailsViewModel.weatherDetails.value?.icon}")),
@@ -46,6 +46,10 @@ fun CityDetails(
 
 
                 }
+                ExtraInfoRow(
+                    text =
+                    cityDetailsViewModel.weatherDetails.value!!.time, fontWeight = Bold
+                )
                 Row(
                     horizontalArrangement = Arrangement.Center,
                     modifier = Modifier.fillMaxWidth()
@@ -85,6 +89,8 @@ fun CityDetails(
                     )
 
                 }
+
+
 
                 ExtraInfoRow(
                     text =
